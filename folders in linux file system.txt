@@ -1,0 +1,45 @@
+FOLDERS IN LINUX FILE SYSTEM
+
+
+File structure represents the flow of the operating system means, what is the operations going on with particular directory
+
+/----ROOT
+It is the parent directory of all directories
+
+/root:
+It is the root user home directory also called as admin 
+
+/bin:
+It contains all binary files,these are executable files
+these files doesn't reflect or effect the system
+
+/sbin:
+It contains executable files same as bin but these files effect the system
+
+/boot:
+This directory contains booting related information 
+
+/dev:
+It contains device related information like hard disk and disk partitions
+
+/etc:
+all confguration files of applications stored here
+
+/opt:
+It is an optional directory user can store 3rd pardy applications here
+
+/proc:
+It contains process information of the system,foreground and background process like shutdown etc..
+
+/srv:
+It contains service related information like kernel service 
+
+/sys:
+It contain system related info like processor,RAM....
+
+/media:
+It contains media related info like pendrives,cdrom....
+
+/tmp:
+it is a temporary directory,stores temporary info
+
