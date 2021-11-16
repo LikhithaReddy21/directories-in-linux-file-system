@@ -1,0 +1,49 @@
+FIRST PROGRAM:
+
+#!/bin/bash
+#timestable-print out a multiplication table
+for i in 1 2 3
+do
+        for j in 1 2 3
+        do
+                value='LIKHITHAREDDY'
+                echo -n "$value"
+        done
+        echo
+done
+OUTPUT:
+LIKHITHAREDDYLIKHITHAREDDYLIKHITHAREDDY
+LIKHITHAREDDYLIKHITHAREDDYLIKHITHAREDDY
+LIKHITHAREDDYLIKHITHAREDDYLIKHITHAREDDY
+
+
+
+SECOND PROGRAM:
+
+#!/bin/bash
+files= 'ls'
+for i in $files
+do
+        echo -n "$i"
+        grep $i $i
+done
+
+OUTPUT:
+f1.sh  f2.sh  f3.sh
+
+
+
+THIRD PROGRAM:
+
+#!/bin/bash
+for i in *;
+do
+        echo -n "$i"
+        grep $i $i
+done
+
+OUTPUT:
+f1.shf3.sh
+
+
+

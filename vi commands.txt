@@ -1,0 +1,27 @@
+    VISUAL EDITOR(VI) COMMANDS
+Vi consists of two modes:
+1.command mode: issue linux commands
+2.insert mode:insert data to your file
+ 
+vi filename:it opens an existing file or creates a new file with the given name
+i:it takes you to insert mode
+esc:it takes you to command mode
+dd: it deletes the specific line where the cursor is present
+u:it undo your last change
+U:undo all the changes to the entire line
+o:it opens a new line
+3dd:it delete 3 lines from the cursor
+D:it delete the content after the cursor
+c:delete the contents of a lineafter the cursor and insert new text. press esc to end the insertion
+dw: to delete one word
+4dw:to delete 4 words
+cw: to change the word
+x:to delete the character at the cursor
+r:to replace the character
+shift+zz:to save the and quit
+:w: to save the file but the file will be in open state
+:q: to quit withuot saving the changes
+:wq: to save the file and quit
+:q!: donot save the contents and quit
+gg: it takes your cursor to the first character of your file
+dG: to delete all the content in the file 
