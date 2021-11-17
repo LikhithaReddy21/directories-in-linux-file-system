@@ -46,4 +46,146 @@ OUTPUT:
 f1.shf3.sh
 
 
+FOURTH PROGRAM
+
+#!/bin/bash
+smallest=10000
+for i in 53 8 19 18 72 34;do
+        if test $i -lt $smallest;then
+                smallest=$i
+        fi
+done
+echo $smallest
+
+OUTPUT:
+8
+
+
+FIFTH PROGRAM:
+
+#1/bin/bash
+i=1
+sum=0
+while [ $i -le 100 ]; do
+        sum='10'
+        i='expr $i + 1'
+done
+echo The sum is $sum
+
+OUTPUT:
+./f5.sh: line 4: [: too many arguments
+The sum is 10
+
+
+SIXTH PROGRAM:
+
+#!/bin/bash
+x=1
+until [ $x -gt 3 ];
+do
+        echo x=$x
+        x='expr $x + 1'
+done
+
+OUTPUT:
+x=expr $x + 1
+./f6.sh: line 3: [: too many arguments
+x=expr $x + 1
+./f6.sh: line 3: [: too many arguments
+x=expr $x + 1
+./f6.sh: line 3: [: too many arguments
+x=expr $x + 1
+./f6.sh: line 3: [: too many arguments
+x=expr $x + 1
+./f6.sh: line 3: [: too many arguments
+x=expr $x + 1
+./f6.sh: line 3: [: too many arguments
+x=expr $x + 1
+./f6.sh: line 3: [: too many arguments..................
+
+
+SEVENTH -PROGRAM:
+
+#1/bin/bash
+echo "Enter username"
+read username
+echo "Enter password"
+read password
+
+if [[ ( $username == "admin" && $password == "secret" ) ]]; then
+        echo "valid user"
+else
+        echo "invalid user"
+fi
+
+OUTPUT:
+1.Enter username
+likihitha
+Enter password
+12345
+invalid user
+
+2.Enter username
+admin
+Enter password
+secret
+valid user
+
+
+EIGHTH PROGRAM:
+ 
+
+#!/bin/bash
+string1="Linux"
+string2="Hint"
+echo "$string1$string2"
+string3=$string1+$string2
+string3+=" is a good tutorial blog site"
+echo $string3
+
+OUTPUT:
+LinuxHint
+Linux+Hint is a good tutorial blog site
+
+
+NINTH PROGRAM:
+
+#!/bin/bash
+echo "Enter first number"
+read x
+echo "Enter second number"
+read y
+(( sum= x+y ))
+echo "The result of addition=$sum"
+
+OUTPUT:
+Enter first number
+10
+Enter second number
+20
+The result of addition=30
+
+
+TENTH PROGRAM:
+
+#!/bin/bash
+function greeting() {
+
+str="Hello, $name"
+echo $str
+
+}
+
+echo "Enter your name"
+read name
+
+val=$(greeting)
+echo "Return value of the function is $val"
+
+OUTPUT:
+Enter your name
+LIKHITHA REDDY
+Return value of the function is Hello, LIKHITHA REDDY
+
+
 
