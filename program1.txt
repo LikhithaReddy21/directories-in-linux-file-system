@@ -78,6 +78,7 @@ Int:23
 
 FOURTH PROGRAM:
 import java.util.Scanner;
+import java.util.Formatter;
 public class Stdipop
 {
  public static void main(String args[])
@@ -88,15 +89,16 @@ public class Stdipop
   {
    String s=sc.next();
    int x=sc.nextInt();
+   String p=String.format("%03d",x);
   }
-  System.out.println(s +"\t"+ x);
+  System.out.println(s +"\t"+ p);
  }
 }
 OUTPUT:
 enter input:
-java 100 pp 101 cpp 123
+java 100 pp 10 cpp 123
 java    100
-pp      101
+pp      010
 cpp     123
 
 
