@@ -1,0 +1,196 @@
+PROGRAM 1
+--------------------------------------------------------------------------
+
+import java.util.*;  
+import java.io.*;
+class Datatypes
+{
+ public static void main(String args[])
+ {
+  Scanner sc=new Scanner(System.in);
+  System.out.println("\nEnter a number:");
+  int a=sc.nextInt();
+  for (int i=0;i<a;i++)
+  {
+   try
+   {
+    long x=sc.nextLong();
+    System.out.println(x+" can be fitted in:");
+    if(x>=-128 && x<=127)
+    System.out.println("Byte");
+    else if(x>=-32768 && x<=32767)
+    System.out.println("Short");
+    else if(x>=-2147483648 && x<=2147483647)
+    System.out.println("Int");
+    else if(x>=-9223372036854775808L && x<=9223372036854775807L)
+    System.out.println("Long");
+   }
+   catch(Exception e)
+   {
+    System.out.println(sc.next()+" can't be fixed anywhere ");
+   }
+  }
+ }
+}
+OUTPUT:
+-------------------------------------------------------------
+Enter a number:
+5
+-150 150000 1500000000 1500000000000000 1500000000000000000000
+-150 can be fitted in:
+Short
+150000 can be fitted in:
+Int
+1500000000 can be fitted in:
+Int
+1500000000000000 can be fitted in:
+Long
+1500000000000000000000 can't be fixed anywhere
+
+
+PROGRAM 2
+---------------------------------------------
+import java.io.*;
+import java.util.*;
+public class Jeof
+{
+ public static void main(String args[])throws IOException
+ { 
+  Scanner sc=new Scanner(System.in);
+  System.out.println("enter no of lines of content:");
+  int n=sc.nextInt(); 
+  File f=new File("abc.txt");
+  Scanner s=new Scanner(f);
+  int i=0;
+  while(s.hasNextLine())
+  {
+   i++;
+   String a=s.nextLine();   
+   System.out.println(i+" "+a);
+  }                  
+ } 
+}  
+
+OUTPUT:
+----------------------------
+enter no of lines of content:
+3
+1 Hello World
+2 I am a File
+3 Read me until end of file
+
+
+PROGRAM 3
+-----------------------------------------------
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+public class Parallelogram
+{
+ static int breadth,height; 
+ static
+ { 
+ Scanner sc=new Scanner(System.in);
+ System.out.println("enter breadth and height:");
+ breadth=sc.nextInt(); 
+ height=sc.nextInt();
+ }
+public static void main(String args[])
+ {
+  if(breadth<=100 && height<=100)
+  {
+   int area=breadth*height;
+   System.out.println("Area of the Parallelogram:"+area);
+  }
+  else if(breadth>101 && height>101)
+  System.out.println("out of range");
+  else
+  System.out.println("java.lang.Exception:breadth and height must be positive");
+ }
+}
+
+OUTPUT:1
+---------------------
+enter breadth and height:
+101
+12
+java.lang.Exception:breadth and height must be positive
+OUTPUT:2
+--------------------------------------
+enter breadth and height:
+7
+2
+Area of the Parallelogram:14
+
+
+
+PROGRAM 4
+------------------------------------------------
+import java.util.*;
+import java.io.*;
+class Inttostring
+{
+ public static void main(String args[])
+ {
+  Scanner sc=new Scanner(System.in);
+  System.out.println("enter a number:");
+  int n=sc.nextInt();
+  String s=Integer.toString(n);
+  if(n>=-100 && n<=100)
+  {
+   if(s.equals(Integer.toString(n)))
+   {
+    System.out.println("Good Job!");
+   }
+  }
+  else
+  System.out.println("Wrong Answer!");
+ }
+}
+
+
+OUTPUT:1
+--------------------
+enter a number:
+12
+Good Job!
+OUTPUT:2
+-----------------------
+enter a number:
+234
+Wrong Answer!
+
+PROGRAM:5
+----------------------------------------------------
+import java.util.*;
+import java.text.*;
+class Currency
+{
+ public static void main(String args[])
+ {
+  Scanner sc=new Scanner(System.in);
+  System.out.println("enter amount:");
+  double d=sc.nextDouble();
+  sc.close();
+  String us=NumberFormat.getCurrencyInstance(Locale.US).format(d);
+  String india=NumberFormat.getCurrencyInstance(new Locale("en")).format(d);
+  String china=NumberFormat.getCurrencyInstance(Locale.CHINA).format(d);
+  String france=NumberFormat.getCurrencyInstance(Locale.FRANCE).format(d);
+  System.out.println("US:"+us);
+  System.out.println("INDIA:"+india);
+  System.out.println("CHINA:"+china);
+  System.out.println("FRANCE:"+france);
+ }
+}
+
+OUTPUT:
+----------------------
+enter amount:
+13244.78
+US:$13,244.78
+INDIA:?13,244.78
+CHINA:¥13,244.78
+FRANCE:13?244,78 ?
+
