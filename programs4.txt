@@ -1,0 +1,176 @@
+FIRST PROGRAM:
+-----------------------------------------------
+import java.util.*;
+import java.io.*;
+public class Str1
+{
+  public static void main(String args[])
+  {
+   Scanner sc=new Scanner(System.in);
+   System.out.println("enter the strings:");
+   String A=sc.next();
+   String B=sc.next();
+   System.out.println(A.length()+B.length());
+   int c=A.compareTo(B);
+   if(c<0)
+   {
+    System.out.println("No");
+   }
+   else
+   {
+    System.out.println("Yes");
+   }
+   System.out.print(A.substring(0,1).toUpperCase()+A.substring(1)+" ");
+   System.out.println(B.substring(0,1).toUpperCase()+B.substring(1));
+  }
+}
+   
+OUTPUT:
+------------------------------------------
+enter the strings:
+hello
+likhitha
+13
+No
+Hello Likhitha
+
+
+SECOND PROGRAM:
+---------------------------------------------
+import java.util.*;
+import java.io.*;
+public class str2
+{
+  public static void main(String args[])
+  {
+   Scanner sc=new Scanner(System.in);
+   System.out.println("enter the string");
+   String s1=sc.nextLine();
+   int startindex=sc.nextInt();
+   int endindex=sc.nextInt();
+   System.out.println(s1.substring(startindex,endindex));
+  }
+}
+OUTPUT:
+------------------------------------------   
+enter the string
+hellojava
+2
+8
+llojav
+
+
+THIRD PROGRAM:
+--------------------------------------------
+import java.util.*;
+import java.io.*;
+public class Anagram
+{
+  public static void main(String args[])
+  {
+   Scanner sc=new Scanner(System.in);
+   String a=sc.nextLine();
+   String b=sc.nextLine();
+   int al=a.length();
+   int bl=b.length();
+   if(al==bl)
+   {
+    char[] s1=a.toCharArray();
+    Arrays.sort(s1);
+    String sort1=new String(s1);
+    char[] s2=b.toCharArray();
+    Arrays.sort(s2);
+    String sort2=new String(s2);
+    if(sort1.equalsIgnoreCase(sort2))
+    System.out.println("Anagrams");
+    else
+    System.out.println("Not Anagrams");
+   }
+  }
+} 
+   
+
+OUTPUT 1:
+--------------------------------
+peeks
+keeps
+Anagrams
+OUTPUT 2:
+--------------------------------
+HELLO
+hello
+Anagrams
+
+
+FOURTH PROGRAM:
+----------------------------------------------------
+import java.util.*;
+import java.io.*;
+public class Palindrome
+{
+  public static void main(String args[])
+  {
+   Scanner sc=new Scanner(System.in);
+   System.out.println("enter a string:");
+   String s=sc.nextLine();
+   String rs="";
+   int length=s.length();
+   for(int i=length-1;i>=0;i--)
+   {
+    rs=rs+s.charAt(i);
+   }
+   if(s.equalsIgnoreCase(rs))
+   System.out.println(s+" is a palindrome");
+   else
+   System.out.println(s+" is not a palindrome");
+  }
+}
+
+OUTPUT 1:
+---------------------------
+enter a string:
+madam
+madam is a palindrome
+OUTPUT 2:
+----------------------------
+enter a string:
+keep
+keep is not a palindrome
+
+
+
+FIFTH PROGRAM:
+----------------------------------------------
+import java.util.*;
+public class prime
+{
+  public static void main(String args[])
+  {
+   int f=0;
+   Scanner sc=new Scanner(System.in);
+   System.out.println("enter a number:");
+   int n=sc.nextInt();
+   for(int i=2;i<=n/2;i++)
+   {
+    if(n%i==0)
+    {
+    f=1;
+    break;
+    }
+   }
+   if(f==0)
+   System.out.println(n+" is a prime number");
+   else
+   System.out.println(n+" is not a prime number");
+  }
+}
+OUTPUT 1:
+--------------------------------
+enter a number:
+33
+33 is not a prime number
+OUTPUT2:
+--------------------------------
+enter a number:
+7
+7 is a prime number
