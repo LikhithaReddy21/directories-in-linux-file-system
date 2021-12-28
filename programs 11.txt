@@ -1,0 +1,93 @@
+PROGRAM 1:
+------------------------------------------------------------
+import java.util.*;
+public class fibonacci
+{
+ public static void main(String args[])
+ {
+  int n1=0,n2=1,n3;
+  Scanner sc=new Scanner(System.in);
+  int count =sc.nextInt();
+  System.out.print(n1+" "+n2);
+  for(int i=1;i<=count;i++)
+  {
+   n3=n1+n2;
+   System.out.print(" "+n3);
+   n1=n2;
+   n2=n3;
+  }
+ }
+}
+
+OUTPUT :
+----------------------------------------
+10
+0 1 1 2 3 5 8 13 21 34 55 89
+
+
+PROGRAM 2:
+------------------------------------------------------
+public class prime1
+  {
+   public static void main(String[] args)
+    {
+     int num=0;
+     String primenumbers="";
+      for(int i=1;i<=100;i++)
+       {
+       int count=0;
+       for(num=i;num>=1;num--)
+        {
+         if(i%num==0)
+          {
+           count=count+1;
+          }
+         }
+        if(count==2)
+          primenumbers=primenumbers+i+" ";
+
+         }
+      System.out.println("primenumbers are :");
+      System.out.println(primenumbers);
+     }
+ }
+
+
+OUTPUT :
+--------------------------------
+primenumbers are :
+2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97
+
+
+PROGRAM 3:
+-----------------------------------------------------------
+import java.util.*;
+public class binary
+  {
+   public static void main(String[] args)
+    {
+     Scanner sc=new Scanner(System.in);
+     String str=sc.nextLine();
+     sc.close();
+     char ch[]=new char[str.length()];
+      int x=0,y=str.length()-1;
+      for(int i=0;i<str.length();i++)
+       {
+        if(str.charAt(i)=='0')
+         {
+           ch[x]=str.charAt(i);
+           x++;
+          }
+         else
+          {
+           ch[y]=str.charAt(i);
+            y--;
+           }
+          }
+          System.out.println(ch);
+       }
+  }
+OUTPUT :
+-----------------------------------------------
+101010
+000111
