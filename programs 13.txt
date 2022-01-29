@@ -1,0 +1,202 @@
+PROGRAM 1:
+--------------------------------------------------------
+import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.io.*;   
+class Regexpression1
+{
+ public static void main(String args[])
+ {           
+  final String regex_pattern ="fooa*bar"; 
+  Pattern s = Pattern.compile(regex_pattern);
+  try
+  {
+   FileReader fr = new FileReader("C:\\Users\\vinny\\Documents\\Data1.txt");
+   BufferedReader br = new BufferedReader(fr);   
+   String line;
+   while((line = br.readLine()) !=null)
+   {
+    Matcher m = s.matcher(line) ;
+    if(m.find())
+    {
+     System.out.println(line);
+    }
+   }
+   br.close();
+  }    
+  catch (IOException e)
+  {
+   e.printStackTrace();
+  }
+ }
+}
+OUTPUT:
+-------------------------------------------------
+fooabar
+fooaaaabar
+foobar
+fooaabar
+fooaabar
+
+
+PROGRAM 2:
+------------------------------------------------------
+import java.io.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+class Regexpression2
+{
+ public static void main(String args[])
+ {
+  final String regx_pattern = "^foo";
+  Pattern p = Pattern.compile(regx_pattern);
+  try
+  {
+   FileReader fr = new FileReader("C:\\Users\\vinny\\Documents\\Data2.txt");
+   BufferedReader br = new BufferedReader(fr);
+   String line;
+   while((line = br.readLine())!= null)
+   {
+    Matcher m = p.matcher(line);
+    if(m.find())
+    {
+     System.out.println(line);
+    }
+   }
+   br.close();
+  } 
+   catch(IOException e)
+   {
+    e.printStackTrace();
+   }
+ }
+}
+
+
+OUTPUT:
+---------------------------------------------------
+foobar
+fooaabar
+fooar
+
+
+PROGRAM 3:
+------------------------------------------------------------------------
+import java.io.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+class Regexpression3
+{
+ public static void main(String args[])
+ {
+  final String regx_pattern = "foo.bar";
+  Pattern p = Pattern.compile(regx_pattern);
+  try
+  {
+   FileReader fr = new FileReader("C:\\Users\\vinny\\Documents\\Data2.txt");
+   BufferedReader br = new BufferedReader(fr);
+   String line;
+   while((line = br.readLine())!= null)
+   {
+    Matcher m = p.matcher(line);
+    if(m.find())
+    {
+     System.out.println(line);
+    }
+   }
+   br.close();
+  }
+  catch(IOException e)
+  {
+   e.printStackTrace();
+  }
+ }
+} 
+     
+OUTPUT:
+--------------------------------------------------------------
+foogbar
+fooxbar
+
+
+PROGRAM 4:
+--------------------------------------------------------------------
+import java.io.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+class Regexpression4
+{
+ public static void main(String args[])
+ {
+  final String regx_pattern = "bar$";
+  Pattern p = Pattern.compile(regx_pattern);
+  try
+  {
+   FileReader fr = new FileReader("C:\\Users\\vinny\\Documents\\Data2.txt");
+   BufferedReader br = new BufferedReader(fr);
+   String line;
+   while((line = br.readLine())!= null)
+   {
+    Matcher m = p.matcher(line);
+    if(m.find())
+    {
+     System.out.println(line);
+    }
+   }
+   br.close();
+  }
+  catch(IOException e)
+  {
+   e.printStackTrace();
+  }
+ }
+}
+
+
+OUTPUT:
+--------------------------------------------------
+fobar
+fooaabar
+ffobar
+foogbar
+fooxbar
+
+PROGRAM 5:
+---------------------------------------------------------------------
+import java.io.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+class Regexpression5
+{
+ public static void main(String args[])
+ {
+   final String regx_pattern = "^foo[a-d]";
+   Pattern p = Pattern.compile(regx_pattern);
+   try
+   {
+    FileReader fr = new FileReader("C:\\Users\\vinny\\Documents\\Data2.txt");
+    BufferedReader br = new BufferedReader(fr);
+    String line;
+    while((line = br.readLine())!= null)
+    {
+     Matcher m = p.matcher(line);
+     if(m.find())
+     {
+      System.out.println(line);
+     }
+    }
+    br.close();
+   } 
+   catch(IOException e)
+   {
+    e.printStackTrace();
+   }
+  }
+}
+
+OUTPUT:
+--------------------------------------------
+foobar
+fooaabar
+fooar
